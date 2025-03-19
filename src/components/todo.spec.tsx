@@ -46,4 +46,21 @@ describe('TodoList Component', () => {
 
         expect(screen.queryByText('Tarefa para excluir')).not.toBeInTheDocument();
     });
+
+    // it('deve apresentar coluna com ID', () => {
+    //     render(<TodoList />);
+    //     const input = screen.getByTestId('todo-input');
+    //     const addButton = screen.getByTestId('add-button');
+
+    //     fireEvent.change(input, { target: { value: 'Tarefa para excluir' } });
+    //     fireEvent.click(addButton);
+
+    //     const storedTodos = localStorage.getItem('todo_list');
+    //     let firstTodo;
+    //     if (storedTodos) {
+    //         firstTodo = JSON.parse(storedTodos)[0].id;
+    //     }
+
+    //     expect(screen.queryByText(firstTodo)).toBeVisible();
+    // });
 });

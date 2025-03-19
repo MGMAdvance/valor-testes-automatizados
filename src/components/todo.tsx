@@ -53,14 +53,15 @@ export default function TodoList() {
             <Button
                 onClick={addTodo}
                 className="bg-blue-500 text-white p-2 rounded w-full mb-2"
-                data-testid="add-button"
+                testid="add-button"
             >
                 Adicionar
             </Button>
             <ul>
                 {todos.map(todo => (
                     <li key={todo.id} className="flex justify-between items-center p-2 border-b">
-                        {todo.text}
+                        {/* <p>{todo.id}</p> */}
+                        <p>{todo.text}</p>
                         <Button onClick={() => removeTodo(todo.id)} className="text-red-500">
                             Excluir
                         </Button>
@@ -71,7 +72,7 @@ export default function TodoList() {
                 <Button
                     onClick={clearTodos}
                     className="bg-red-500 text-white p-2 rounded w-full mt-2"
-                    data-testid="clear-button"
+                    testid="clear-button"
                 >
                     Limpar Tudo
                 </Button>
